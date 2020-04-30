@@ -11,5 +11,7 @@ const app = express()
 
 const mod = require('./mainRouter')
 app.use(mod)
-app.listen(3000)
-console.log('Express server running on port 3000')
+
+const port = process.env.PORT || 3000
+app.listen(port)
+console.log('Express server running on port', port)
